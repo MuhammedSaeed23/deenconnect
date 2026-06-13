@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- brand logo  -->
+        <div class="nabbar">
+            <div class="logo_container">
+               <div class="brand_logo">☪</div>
+                   <div class="brand_name">
+                      <p class="name">DeenConnect</p>
+                      <p class="sub_name">Pakistan</p>
+                   </div>
+            </div>
+        <!-- home button -->
+            <a href="/" class="home">
+              🏠 Home
+            </a>
+        <!-- islamic learning  -->
+            <a href="/learning/" class="learning">
+                📖  <p class="btn">Islamic Learning</p>
+            </a>
+        <!-- dua button  -->
+            <a href="/Dua/" class="dua">
+                🤲 Duas
+            </a>
+        <!-- masjid button  -->
+            <a href="/masjid/" class="masjid learning">
+                🕌  <p class="btn">Mosque Finder</p> 
+            </a>
+
+            <button class="get_start">Get started</button>
+        </div>
+    </header>
+
+
+                   <!-- hero section start here -->
+
+    <main>
+          <!-- hero section -->
+
+           <section class="hero">
+               <div class="left_hero">
+                    <div class="platform ">
+                        <span class="pill_dot"></span>Pakistan's Islamic Platform
+                    </div>
+
+                    <div class="intro  ">
+                        <p class="animation">
+                        Strengthen Your
+                        Connection  
+                        </p> 
+                        <p class="animation">with <span class="highlight">Deen</span></p>
+                    </div>
+  
+                    <div class="expl animation">
+                        Explore Quran, Hadith, Daily Duas and Find Mosques Across Pakistan — beautifully crafted for Muslims.
+                    </div>
+
+                    <div class="combo_btn">
+                        <button class="explore herobtn">📖 Explore Learning</button>
+                        <button class="find herobtn">🕌 Find Mosques</button>
+                    </div>
+                    
+               </div>
+
+                   <hr class="line">
+
+                <div class="hero_stats reveal">
+                    <div class="mosque stats">
+                        <span class="stats_n">6,200+</span>
+                        <span class="stats_i">Mosques Listed</span>
+                    </div>
+
+                <div class="dua_stats stats">
+                    <span class="stats_n">15,00+</span>
+                    <span class="stats_i">Duas Available</span>
+                </div>
+
+                <div class="active_user stats">
+                    <span class="stats_n">80k+</span>
+                    <span class="stats_i">Active Users</span>
+                </div> 
+              </section>
+
+              <section>
+                <div class="home_intro">
+                    <div class="intro_box">
+                       
+                            <span class="purpose reveal" >Our Purpose</span>
+                        
+                        <h2 class="heading2 reveal">Helping Muslims Across Pakistan Learn Islam</h2>
+                       <p class="text reveal">DeenConnect Pakistan brings together daily Quranic guidance, authenticated Hadith, a complete Dua library, and Pakistan's largest mosque directory — all in one beautiful platform.</p>
+                    </div>
+
+                    <div class="intro_end">
+                        <p class="bissmillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                        <span class="tarjma">"In the name of Allah, the Most Gracious, the Most Merciful"</span>
+                    </div>
+                </div>
+              </section>
+
+              <section>
+                <div class="home_preview">
+                    <span class="purpose2">Explore Platform</span>
+                    <h2 class="preview2">Everything You Need In One Place</h2>
+
+                    <div class="tool_container">
+                        <div class="pc_box reveal">
+                            <div class="pc_icon">📖</div>
+                            <div class="pc_title">Islamic Learning</div>
+                            <div class="pc_disc">Daily Quranic Ayah, Hadith of the Day, and morning Dua — fresh every day to strengthen your faith.</div>
+                            <a href="/learning/" class="pc">Open Learning →</a>
+                        </div>
+
+                        <div class="pc_box reveal">
+                            <div class="pc_icon i1">🤲</div>
+                            <div class="pc_title ">Dua Collection</div>
+                            <div class="pc_disc">Browse 1,500+ authenticated duas by category — Morning, Evening, Travel, Prayer and more.</div>
+                            <a href="/Dua/" class="pc">Browse Duas  →</a>
+                        </div>
+
+                        <div class="pc_box reveal">
+                            <div class="pc_icon i2">🕌</div>
+                            <div class="pc_title">Mosque Finder</div>
+                            <div class="pc_disc">Find any mosque across Pakistan with real-time prayer timings, address and directions.</div>
+                            <a href="/masjid/" class="pc">Find Mosques →</a>
+                        </div>
+
+                        <div class="pc_box reveal">
+                            <div class="pc_icon i3">🧮</div>
+                            <div class="pc_title">Zakat Helper</div>
+                            <div class="pc_disc">Calculate your Zakat easily with our accurate calculator based on current Nisab values in Pakistan.</div>
+                            <button class="pc">Calculate Zakat →</button>
+                        </div>
+                    </div>
+
+                </div>
+              </section>
+
+
+    </main>
+           <footer>
+
+            <div class="site_footer">
+         <div class="innercol1">
+            <div class="icon_pg">
+            <div class="logo_container">
+               <div class="brand_logo">☪</div>
+                   <div class="brand_name">
+                      <p class="name">DeenConnect</p>
+                      <p class="sub_name">Pakistan</p>
+                   </div>
+            </div>
+
+            <p class="expl2">Helping Muslims across Pakistan learn Islam and discover nearby mosques — one dua at a time.</p>
+            </div>
+            <div class="inner_col2">
+                Learn
+                <ul>
+                   <li> Daily Quran</li>
+                    <li> Collection</li>
+                    <li>Dua Library</li>
+                    <li>Islamic Calendar</li>
+                </ul>
+            </div>
+
+            <div class="inner_col2">
+                Explore
+                <ul>
+                   <li>Find Mosques </li>
+                    <li>Prayer Times </li>
+                    <li>Qibla Direction</li>
+                    <li>Zakat Calculator</li>
+                </ul>
+            </div>
+            <div class="inner_col2">
+                Platform
+                <ul>
+                   <li>About Us </li>
+                    <li>Contact </li>
+                    <li>Contribute</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="line2">
+        <div class="copyright">
+            <p>© 2026 DeenConnect Pakistan. Made with ❤️ in Lahore.</p>
+            <p class="closing">بِسْمِ اللَّهِ</p>
+            <p>All right reserved</p>
+        </div>
+         </div>
+        
+           </footer>
+           <script src="{% static 'js/home.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.nabbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(7, 26, 15, 0.96);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 70px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+}
+.logo_container{
+    display: flex;
+    gap: 1rem;
+}
+.brand_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.4rem;
+    min-width: 3rem;
+    background: linear-gradient(145deg, #c9a84c, #dfc070);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: larger;
+}
+.sub_name{
+    color: #dfc070;
+}
+.name{
+    color: #ffffff;
+    font-weight: bold;
+
+}
+.learning{
+    color: rgba(255, 255, 255, 0.38);
+    height: 3.3rem;
+    width: 11rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 1rem;
+    text-decoration: none;
+}
+.btn{
+    width: 4rem;
+}
+.dua{
+    color: rgba(255, 255, 255, 0.38);
+    height: 3.3rem;
+    width: 11rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     cursor: pointer;   
+     gap: 10px; 
+     text-decoration: none;
+}
+.learning:hover{
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+}
+.dua:hover{
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+}
+
+.get_start{
+    min-height: 3rem;
+    width: 10rem;
+    border-radius: 2rem;
+    background-color: #c9a84c;
+    font-size: large;
+}
+.home{
+    min-height: 2.5rem;
+    min-width:9rem ;
+    background: rgba(212, 175, 55, 0.10);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    color: #c9a84c;
+    font-size: large;
+    text-decoration: none;
+}
+.home_intro{
+    margin-top: 70px;
+    min-height: 24rem;
+    background: 
+       url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23c9a84c' stroke-width='0.4' stroke-opacity='0.18'%3E%3Cpolygon points='36,4 68,22 68,50 36,68 4,50 4,22'/%3E%3Cpolygon points='36,12 60,26 60,46 36,60 12,46 12,26'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Cline x1='36' y1='4' x2='36' y2='12'/%3E%3Cline x1='68' y1='22' x2='60' y2='26'/%3E%3Cline x1='68' y1='50' x2='60' y2='46'/%3E%3Cline x1='36' y1='68' x2='36' y2='60'/%3E%3Cline x1='4' y1='50' x2='12' y2='46'/%3E%3Cline x1='4' y1='22' x2='12' y2='26'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(155deg, #071a0f 0%, #0a2318 50%, #0d2a1a 100%)
+
+    ;
+}
+.purpose{
+    text-transform: uppercase;
+    color:#d2b15a ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.purpose::before{
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #d4af37;
+    display: inline-block;
+   
+}
+.intro_box{
+    width:40% ;
+    margin-left: 4rem;
+    padding-top: 4rem;
+}
+
+.heading2{
+    color: white;
+    font-size: 33px;
+    margin-top: 15px;
+    position: relative;
+    width: 80%;
+}
+
+.heading2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 3px;
+    background: #d4af37;
+}
+.text{
+    margin-top: 2.4rem;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.search{
+    height:3rem ;
+    width: 40%;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: large;
+    border: 1px solid rgba(255, 255, 255, 0.55) ;
+    color: #ffffff;
+    padding-left: 1rem;
+
+
+}
+.city{
+    height:3rem ;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: large;
+    border: 1px solid rgba(255, 255, 255, 0.55) ;
+    width: 13%;
+    border-radius: 30px;
+    color: #ffffff;  
+}
+.city option{
+    background-color: #0a2318;
+}
+.search:focus{
+        border: 1px solid #d4af37;
+        outline: none;
+
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 2rem;
+    margin-left: 2rem;
+
+
+}
+.search::placeholder{
+    font-size: large;
+}
+.ranking{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    margin-top: 3rem;
+    width: 95%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: #0d2a1a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.377);
+
+}
+
+.top1{
+    width: 90%;
+
+}
+
+.tag{
+    margin-bottom: 1rem;
+    border: 1px solid #d4af37;
+    background: rgba(201, 168, 76, 0.15);
+    width: 28%;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #d4af37;
+}
+
+.masjid-name{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+}
+
+.location{
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.55);
+
+}
+
+.timing{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.timing > div{
+    min-width: 90px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.timing p{
+    margin: 0;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.55);
+
+
+}
+
+.timing span{
+    margin: 0;color: #d4af37;
+    font-weight: bold;
+}
+
+.svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 220px;
+}
+.mosquebody{
+    min-height: 34rem;
+    background-color: #faf8f3;
+    padding-left: 4rem;
+}
+.about{
+    background: 
+       url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23c9a84c' stroke-width='0.4' stroke-opacity='0.18'%3E%3Cpolygon points='36,4 68,22 68,50 36,68 4,50 4,22'/%3E%3Cpolygon points='36,12 60,26 60,46 36,60 12,46 12,26'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Cline x1='36' y1='4' x2='36' y2='12'/%3E%3Cline x1='68' y1='22' x2='60' y2='26'/%3E%3Cline x1='68' y1='50' x2='60' y2='46'/%3E%3Cline x1='36' y1='68' x2='36' y2='60'/%3E%3Cline x1='4' y1='50' x2='12' y2='46'/%3E%3Cline x1='4' y1='22' x2='12' y2='26'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(155deg, #071a0f 0%, #0a2318 50%, #0d2a1a 100%)
+
+    ;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 1rem;
+
+}
+    .sub-mosque{
+        width: 30%;
+        border: 1px solid #0a2318;
+        height: 20rem;
+        border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.377);
+    transition: all 0.2s ease;
+    }
+    .sub-mosque:hover{
+    box-shadow: 0 10px 25px #0a2318;
+    border-bottom: 4px solid #c9a84c;
+
+
+    }
+    .title{
+        display: flex;
+        padding-left: 2rem;
+        justify-content: space-between;
+        width: 90%;
+
+    }
+  .icon{
+        background-color: #e2f2e9;
+        font-size: xx-large;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 4px;
+
+  }
+  .dist{
+    color: #d4af37;
+    margin-top: 1rem;
+  }
+    .timing-sub{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.mosquename{
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+.mosquecity{
+    color: #0a2318;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    
+
+}
+
+.timing-sub > div{
+    min-width: 60px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.timing-sub p{
+    margin: 0;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: small;
+    color: #a09890;
+
+}
+
+.timing-sub span{
+    margin: 0;
+    color: #0a2318;
+    font-weight: bold;
+    font-size: small;
+    background-color: #e2f2e9;
+    height: 2rem;
+    width: 3.4rem;
+    display: flex;
+    align-items: center;
+
+
+}
+.mosquebox{
+    display: flex;
+    gap: 2rem;
+
+}
+.prayer{
+    margin-top: 1rem;
+    color: #a09890;
+    margin-left: 1rem;
+}
+.foot{
+    background: #0a2318;
+    display: flex;
+    height: 8rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.closing{
+    color: rgba(201, 168, 76, 0.55);
+    font-size: x-large;
+}
+.reveal{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.animation{
+     animation: slideUp 1s ease forwards;
+}
+@keyframes slideUp{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+

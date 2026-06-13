@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dua.css' %}">
+    <title>Document</title>
+</head>
+<body>
+        <header>
+        <!-- brand logo  -->
+        <div class="nabbar">
+            <div class="logo_container">
+               <div class="brand_logo">☪</div>
+                   <div class="brand_name">
+                      <p class="name">DeenConnect</p>
+                      <p class="sub_name">Pakistan</p>
+                   </div>
+            </div>
+        <!-- home button -->
+            <a href="/" class="home">
+              🏠 Home
+            </a>
+        <!-- islamic learning  -->
+            <a href="/learning/" class="learning">
+                📖  <p class="btn">Islamic Learning</p>
+            </a>
+        <!-- dua button  -->
+            <div class="dua">
+                🤲 Duas
+            </div>
+        <!-- masjid button  -->
+            <a href="/masjid/" class="masjid learning">
+                🕌  <p class="btn">Mosque Finder</p> 
+            </a>
+
+            <button class="get_start">Get started</button>
+        </div>
+    </header>
+
+    <main>
+           <section>
+               <div class="home_intro">
+                    <div class="intro_box">
+                       
+                            <span class="purpose animation">Dua Library</span>
+                        
+                        <h2 class="heading2 animation">Complete Dua Collection</h2>
+                       <p class="text animation">Over 1,500 authenticated duas with Arabic text, Urdu and English translation, and audio recitation.</p>
+
+                    </div>
+                       
+                       
+                     <div class="sug animation">
+                        <input type="text" placeholder="Search duas-e.g.'Before sleeping','rain duas'" class="search">
+                       <div class="sugest animation">
+                        <div >poppular :</div>
+                          <div class="suggestion">Istikhara</div>
+                          <div class="suggestion">Before eating</div>
+                          <div class="suggestion">Anxiety relief</div>
+                          <div class="suggestion">Travelling  </div>
+                       </div>
+                     </div>
+                    
+              </div>
+           </section>
+
+           <section>
+            <div class="duasection reveal">
+                <span class="purpose2">Browse by Category</span>
+
+                <div class="dua-containers reveal">
+                    <div class="duas reveal">
+                        <div class="icon">🌅</div>
+                        <h3>Morning Duas</h3>
+                        <span class="num">24 duas</span>
+                        <div class="next">→</div>
+                    </div>
+
+                    <div class="duas reveal">
+                        <div class="icon">🌙</div>
+                        <h3>Evening Duas</h3>
+                        <span class="num">18 duas</span>
+                        <div class="next">→</div>
+                    </div>
+                </div>
+
+                <div class="dua-containers reveal">
+                    <div class="duas">
+                        <div class="icon">✈️</div>
+                        <h3>Travel Duas</h3>
+                        <span class="num">12 duas</span>
+                        <div class="next">→</div>
+                    </div>
+
+                    <div class="duas">
+                        <div class="icon">🕌</div>
+                        <h3>Prayer Duas</h3>
+                        <span class="num">30 duas</span>
+                        <div class="next">→</div>
+                    </div>
+                </div>
+
+                <div class="dua-containers reveal">
+                    <div class="duas">
+                        <div class="icon">😴</div>
+                        <h3>\Before Sleep</h3>
+                        <span class="num">15 duas</span>
+                        <div class="next">→</div>
+                    </div>
+
+                    <div class="duas">
+                        <div class="icon">🍽️</div>
+                        <h3>Food & Eating</h3>
+                        <span class="num">8 duas</span>
+                        <div class="next">→</div>
+                    </div>
+                </div>
+
+                <div class="dua-containers reveal">
+                    <div class="duas">
+                        <div class="icon">💔</div>
+                        <h3>Anxiety & Grief</h3>
+                        <span class="num">20 duas</span>
+                        <div class="next">→</div>
+                    </div>
+
+                    <div class="duas">
+                        <div class="icon">🌧️</div>
+                        <h3>Rain & Weather</h3>
+                        <span class="num">6 duas</span>
+                        <div class="next">→</div>
+                    </div>
+                </div>
+
+            </div>
+           </section>
+
+
+    </main>
+    
+        <footer>
+
+            <div class="foot">
+                <p class="ic_translate">© 2026 DeenConnect Pakistan</p>
+                <p class="closing">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                <p class="ic_translate">Made by Saeed❤️in Lahore</p>
+            </div>
+        </footer>
+           <script src="{% static 'js/dua.js' %}"></script>
+</body>
+</html>

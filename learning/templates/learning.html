@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/learning.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- brand logo  -->
+        <div class="nabbar">
+            <div class="logo_container">
+               <div class="brand_logo">☪</div>
+                   <div class="brand_name">
+                      <p class="name">DeenConnect</p>
+                      <p class="sub_name">Pakistan</p>
+                   </div>
+            </div>
+        <!-- home button -->
+            <a href="/" class="home">
+              🏠 Home
+            </a>
+        <!-- islamic learning  -->
+            <a href="/learning/" class="learning">
+                📖  <p class="btn">Islamic Learning</p>
+            </a>
+        <!-- dua button  -->
+            <a href="/Dua/" class="dua">
+                🤲 Duas
+            </a>
+        <!-- masjid button  -->
+            <a href="/masjid/" class="masjid learning">
+                🕌  <p class="btn">Mosque Finder</p> 
+            </a>
+
+            <button class="get_start">Get started</button>
+        </div>
+    </header>
+    <main>
+        <section>
+               <div class="home_intro">
+                    <div class="intro_box">
+                       
+                            <span class="purpose">Daily Reflection</span>
+                        
+                        <h2 class="heading2 animation">Islamic Learning</h2>
+                       <p class="text animation">Begin each day with wisdom from the Quran, an authenticated Hadith, and a meaningful Dua. Content refreshes daily.</p>
+                       <div class="islamicdate animation">
+                        <span>.📅 Tuesday, 2 June 2026 · </span><span> Dhul-Hijjah 1447H</span>
+                       </div>
+                    </div>
+              </div>
+        </section>
+
+        <section>
+            <div class="islamic">
+                <div class="Quran_card reveal">
+
+                    <div class="ic_title">
+                        <div class="pc_icon">📖</div>
+                        <span class="icon">Ayah of the Day</span>
+                    </div>
+
+                    <div class="ic_body">
+                        <div class="ic_label">Surah Al-Inshirah · Verse 5–6</div>
+
+                        <div class="ic_ayat">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا · إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+                        <div class="ic_translate">"For indeed,<span class="trans">with hardship will be ease</span>  — Indeed, with hardship will be ease."</div>
+                        <div class="ic_source">📚 Surah Al-Inshirah 94:5–6</div>
+        
+
+                    </div>
+                        <div class="surah">Read full Surah →</div>
+
+
+                </div>
+
+
+                <div class="Quran_card reveal">
+
+                    <div class="ic_title">
+                        <div class="pc_icon">🌙</div>
+                        <span class="icon">Hadith of the Day</span>
+                    </div>
+
+                    <div class="ic_body">
+                        <div class="ic_label">Sahih Al-Bukhari · Book of Revelation</div>
+
+                        <div class="ic_ayat">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
+                        <div class="ic_translate">"<span class="trans">Actions are judged by their intentions</span>  , and every person will get the reward according to what he has intended."</div>
+                        <div class="ic_source">📚 Sahih al-Bukhari 1 · Sahih Muslim 1907</div>
+        
+
+                    </div>
+                        <div class="surah">Explore Hadiths →</div>
+                </div>
+
+                <div class="Quran_card reveal">
+
+                    <div class="ic_title ">
+                        <div class="pc_icon">🤲</div>
+                        <span class="icon">Daily Dua</span>
+                    </div>
+
+                    <div class="ic_body">
+                        <div class="ic_label">Morning Supplication</div>
+
+                        <div class="ic_ayat">اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ</div>
+                        <div class="ic_translate">"<span class="trans">O Allah, by You we reach the morning, </span>  by You we reach the evening, by You we live, and by You we die."</div>
+                        <div class="ic_source">📚 Abu Dawud 5068 · At-Tirmidhi 3391</div>
+        
+
+                    </div>
+                        <div class="surah">All Duas →</div>
+                </div>
+                 
+            
+
+        </section> 
+
+             <div class="archieve reveal">
+
+             <div class="content">
+                 <div class="source">📚 Content Archive</div>
+                <div class="ic_translate">"<span class=" bold">Missed yesterday's content? </span>   Browse our complete archive of past Ayahs, Hadiths, and Duas — searchable and categorized.</div>
+             </div>
+                        <button class="explore herobtn">📖 Browse Archive →</button>
+           </div>
+        
+        <footer>
+
+            <div class="foot">
+                <p class="ic_translate">© 2026 DeenConnect Pakistan</p>
+                <p class="closing">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                <p class="ic_translate">Made by Saeed❤️in Lahore</p>
+            </div>
+        </footer>
+    </main>
+           <script src="{% static 'js/learning.js' %}"></script>
+</body>
+</html>
