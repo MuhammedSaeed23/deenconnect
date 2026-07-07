@@ -335,7 +335,9 @@ let userLat = null;
 let userLng = null;
  
 search.addEventListener("click", () => {
- 
+     static.style.display = "none";
+     loading.style.display = "flex";
+
     if (input.value.trim() === "") {
         container.classList.add("shake-error");
         setTimeout(() => container.classList.remove("shake-error"), 350);
@@ -376,7 +378,8 @@ function doSearch() {
         .then((response) => response.json())
         .then((result) => {
             console.log(result);
- 
+         loading.style.display = "none";
+
             const mosquebody = document.querySelector(".mosquebody");
  
             // BUG FIX 3: purani results clear karo warna duplicate bante rahenge
