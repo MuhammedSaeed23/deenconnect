@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'learning',
     'Dua',
     'mosque',
+    'zukat',
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/masjid.css' %}">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css">
     <title>Document</title>
 </head>
 <body>
@@ -35,6 +37,11 @@
                 🕌  <p class="btn">Mosque Finder</p> 
             </a>
 
+            <a href="/zakat/" class="masjid learning">
+
+                🧮  <p class="btn">Zakat</p> 
+           </a>
+
             <button class="get_start">Get started</button>
         </div>
     </header>
@@ -63,247 +70,30 @@
                         <option>Quetta</option>
                         <option>Sialkot</option>
                         <option>Gujranwala</option>
-                    </select>                       
+                    </select> 
+                      <div class="search_container">                     
                         <input type="text" placeholder="🔍search mosque by name or area..." class="search">
-                         <button class="get_start">Search Mosque</button>
+                         {% csrf_token %}
+                        <button class="searchbtn">🔍</button>
+                      </div>
+                         <button class="find">Find Mosques Near Me</button>
                     </div>
 
                 </section>
 
 <section class="mosquebody">
- <div class="ranking reveal">
-    <div class="top1">
+    <div class="pur">
+        <span class="purpose2">Explore Masajid Around You</span>
+    </div>
+    <div class="static">🔍 Go and search your nearby mosque </div>
 
-        <div class="tag">
-            ⭐Mosque of the Month
-        </div>
-
-        <div class="masjid-name">
-            Badshahi Mosque
-        </div>
-
-        <div class="location">
-            📍 Fort Road, Walled City, Lahore — Built 1673, Mughal Era
-        </div>
-
-        <div class="timing">
-
-            <div class="fajr">
-                <p>FAJR</p>
-                <span>4:20 AM</span>
-            </div>
-
-            <div class="dhuhr">
-                <p>DHUHR</p>
-                <span>12:15 PM</span>
-            </div>
-
-            <div class="asr">
-                <p>ASR</p>
-                <span>4:45 PM</span>
-            </div>
-
-            <div class="maghrib">
-                <p>MAGHRIB</p>
-                <span>7:08 PM</span>
-            </div>
-
-            <div class="isha">
-                <p>ISHA</p>
-                <span>8:35 PM</span>
-            </div>
-
-        </div>
-
+ <div class="mosquebox reveal">
+     <div class="loading">
+        <i class="fa-solid fa-spinner spinner"></i>
+        <span class="loadtext">Searching nearby mosques...</span>
     </div>
 
-    <div class="svg">
-
-        <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
-
-            <path d="M50 105 Q50 70 80 62 Q110 70 110 105 Z"
-                  fill="rgba(201,168,76,0.15)"
-                  stroke="rgba(201,168,76,0.6)"
-                  stroke-width="1" />
-
-            <rect x="56" y="105" width="48" height="30" rx="2"
-                  fill="rgba(201,168,76,0.1)"
-                  stroke="rgba(201,168,76,0.4)"
-                  stroke-width="0.8" />
-
-            <rect x="36" y="86" width="10" height="36" rx="1"
-                  fill="rgba(201,168,76,0.1)"
-                  stroke="rgba(201,168,76,0.4)"
-                  stroke-width="0.8" />
-
-            <path d="M36 86 Q41 76 46 86Z"
-                  fill="rgba(201,168,76,0.2)"
-                  stroke="rgba(201,168,76,0.5)"
-                  stroke-width="0.8" />
-
-            <line x1="41" y1="75" x2="41" y2="68"
-                  stroke="rgba(201,168,76,0.7)"
-                  stroke-width="1" />
-
-            <rect x="114" y="86" width="10" height="36" rx="1"
-                  fill="rgba(201,168,76,0.1)"
-                  stroke="rgba(201,168,76,0.4)"
-                  stroke-width="0.8" />
-
-            <path d="M114 86 Q119 76 124 86Z"
-                  fill="rgba(201,168,76,0.2)"
-                  stroke="rgba(201,168,76,0.5)"
-                  stroke-width="0.8" />
-
-            <line x1="119" y1="75" x2="119" y2="68"
-                  stroke="rgba(201,168,76,0.7)"
-                  stroke-width="1" />
-
-            <path d="M73 135 L73 116 Q80 110 87 116 L87 135Z"
-                  fill="rgba(201,168,76,0.08)"
-                  stroke="rgba(201,168,76,0.35)"
-                  stroke-width="0.8" />
-
-            <path d="M80 57 Q83 50 80 45 Q82 49 87 48 Q82 51 80 57Z"
-                  fill="rgba(201,168,76,0.7)" />
-
-            <circle cx="80" cy="80" r="55"
-                    stroke="rgba(201,168,76,0.08)"
-                    stroke-width="0.8" />
-
-        </svg>
-
-    </div>
- </div>
-             <h3 class="mosquecity">Mosques in <span> Lahore</span></h3>
-<!-- here create mosquebox -->
- <div class="mosquebox">
-             <div class="sub-mosque reveal">
-                <div class="about">
-                    <div class="title">
-                        <div class="icon">🕌</div>
-                        <div class="dist">2.1km</div>
-                    </div>
-                    <h3 class="mosquename">Masjid Wazir Khan</h3>
-                    <div class="location">📍 Inside Delhi Gate, Walled City, Lahore</div>
-                </div>
-              <p class="prayer">Today's Prayer Timings</p>  
-
-        <div class="timing-sub">
-
-            <div class="fajr">
-                <p>FAJR</p>
-                <span>4:20 AM</span>
-            </div>
-
-            <div class="dhuhr">
-                <p>DHUHR</p>
-                <span>12:15 PM</span>
-            </div>
-
-            <div class="asr">
-                <p>ASR</p>
-                <span>4:45 PM</span>
-            </div>
-
-            <div class="maghrib">
-                <p>MAGHRIB</p>
-                <span>7:08 PM</span>
-            </div>
-
-            <div class="isha">
-                <p>ISHA</p>
-                <span>8:35 PM</span>
-            </div>
-
-        </div>
-    </div>
-    <!-- here second mosque box -->
-
-                 <div class="sub-mosque reveal">
-                <div class="about">
-                    <div class="title">
-                        <div class="icon">🕌</div>
-                        <div class="dist">6.3km</div>
-                    </div>
-                    <h3 class="mosquename">Masjid Data Darbar</h3>
-                    <div class="location">📍 Data Ganj Bakhsh Road, Lahore</div>
-                </div>
-              <p class="prayer">Today's Prayer Timings</p>  
-
-        <div class="timing-sub">
-
-            <div class="fajr">
-                <p>FAJR</p>
-                <span>4:25 AM</span>
-            </div>
-
-            <div class="dhuhr">
-                <p>DHUHR</p>
-                <span>1:15 PM</span>
-            </div>
-
-            <div class="asr">
-                <p>ASR</p>
-                <span>5:15 PM</span>
-            </div>
-
-            <div class="maghrib">
-                <p>MAGHRIB</p>
-                <span>7:08 PM</span>
-            </div>
-
-            <div class="isha">
-                <p>ISHA</p>
-                <span>9:15 PM</span>
-            </div>
-
-        </div>
-    </div>
-
-                 <div class="sub-mosque reveal">
-                <div class="about">
-                    <div class="title">
-                        <div class="icon">🕌</div>
-                        <div class="dist">2.1km</div>
-                    </div>
-                    <h3 class="mosquename">Jamia Masjid Gulberg</h3>
-                    <div class="location">📍 Main Boulevard, Gulberg III, Lahore</div>
-                </div>
-              <p class="prayer">Today's Prayer Timings</p>  
-
-        <div class="timing-sub">
-
-            <div class="fajr">
-                <p>FAJR</p>
-                <span>4:20 AM</span>
-            </div>
-
-            <div class="dhuhr">
-                <p>DHUHR</p>
-                <span>12:15 PM</span>
-            </div>
-
-            <div class="asr">
-                <p>ASR</p>
-                <span>4:45 PM</span>
-            </div>
-
-            <div class="maghrib">
-                <p>MAGHRIB</p>
-                <span>7:08 PM</span>
-            </div>
-
-            <div class="isha">
-                <p>ISHA</p>
-                <span>8:35 PM</span>
-            </div>
-
-        </div>
-    </div>
-
-
- </div>
+ </div> 
 </section>        
 
     </main>
@@ -316,6 +106,7 @@
             </div>
         </footer>
 
+<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
            <script src="{% static 'js/masjid.js' %}"></script>
 </body>
 </html>

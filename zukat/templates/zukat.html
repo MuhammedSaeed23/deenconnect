@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/zukat.css' %}"> 
+   <title>Document</title>
+</head>
+<body>
+        <header>
+        <!-- brand logo  -->
+        <div class="nabbar">
+            <div class="logo_container">
+               <div class="brand_logo">☪</div>
+                   <div class="brand_name">
+                      <p class="name">DeenConnect</p>
+                      <p class="sub_name">Pakistan</p>
+                   </div>
+            </div>
+        <!-- home button -->
+            <a href="/" class="home">
+              🏠 Home
+            </a>
+        <!-- islamic learning  -->
+            <a href="/learning/" class="learning">
+                📖  <p class="btn">Islamic Learning</p>
+            </a>
+        <!-- dua button  -->
+            <a href="/Dua/" class="dua">
+                🤲 Duas
+            </a>
+        <!-- masjid button  -->
+            <a href="/masjid/" class="masjid learning">
+                🕌  <p class="btn">Mosque Finder</p> 
+            </a>
+
+           <a href="/zakat/" class="masjid learning">
+
+                🧮  <p class="btn">Zakat</p> 
+           </a>
+
+
+            <button class="get_start">Get started</button>
+        </div>
+    </header>
+    <main>
+        <section class="home_intro">
+            <div class="importance animation">☪ Third pillar of islam </div>
+            <h1 class="animation">Calculate Your <span class="text animation">Zakat</span></h1>
+            <p class="dscrp animation">Enter your assets below. We will instantly calculate how much Zakat you owe — <span class="text_sp">based on current prices in Pakistan.</span></p>
+            <div class="rate">
+          
+                <div class="goldrate tag animation">Gold / gram <span class="price"> PKR 16,975</span></div>
+                <div class="silverrate tag animation">Silver /gram <span class="price"> PKR 400</span></div>
+                <div class="nisab tag animation">Nisab (silver) <span class="price"> PKR  2,45,000</span></div>
+            </div>
+                 <div class="tag2 animation">
+                   <div class="zakat tag">Zakat rate  <span class="price"> 2.5%</span></div>
+                </div>
+
+        </section>
+
+
+        <section class="hero_section">
+            <div class="pur">
+               <span class="purpose2">Step 1 — What do you own?</span>
+            </div>
+
+            <div class="step1">
+                <div class="gold reveal">
+                    <div class="icon">🥇</div>
+
+                    <div class="metal_assit">
+                        <p class="hero_name">Gold</p>
+                        <p class="detail"> Kitne grams hain? Ya seedha PKR value likhein</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <div class="toggle_btn">
+                           <button class="gram">Grams</button>
+                           <button class="pkr">PKR</button>
+                       </div>
+                       <input type="number"class="input golds " placeholder="0">
+                       <div class="converstion3"></div>
+                    </div>
+                </div>
+                <!-- silver -->
+
+                 <div class="gold reveal">
+                    <div class="icon">🥈</div>
+
+                    <div class="metal_assit">
+                        <p class="name">Silver</p>
+                        <p class="detail"> Kitne grams hain? Ya seedha PKR value likhein</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <div class="toggle_btn">
+                           <button class="gram2">Grams</button>
+                           <button class="pkr2">PKR</button>
+                       </div>
+                       <input type="number"  class="input silver"  placeholder="0">
+                        <div class="converstion2"></div>
+                    </div>
+                </div>
+
+                <div class="gold reveal">
+                    <div class="icon">💵</div>
+
+                    <div class="metal_assit ">
+                        <p class="name">Cash & Bank Savings</p>
+                        <p class="detail"> Cash at home + all bank accounts</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <input type="number"class="input cash" placeholder="0">
+                    </div>
+                </div>
+
+
+                 <div class="gold reveal">
+                    <div class="icon">📈</div>
+
+                    <div class="metal_assit ">
+                        <p class="name">Investments & Stocks</p>
+                        <p class="detail"> Shares, mutual funds, business goods</p>
+                    </div>
+
+                    <div class="in_assit ">
+                      <input type="number"class="input investment" placeholder="0">
+
+                    </div>
+                </div>
+               
+                <div class="gold reveal">
+                    <div class="icon">🤝</div>
+
+                    <div class="metal_assit ">
+                        <p class="name">Money Others Owe You</p>
+                        <p class="detail"> Loans you gave that you expect back</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <input type="number"class="input loans" placeholder="0">
+                    </div>
+                </div>
+
+
+            </div>
+             <div class="pur">
+               <span class="purpose2">Step 2 — What do you owe? (optional)</span>
+             </div>
+
+            <div class="step2">
+                <div class="gold reveal">
+                    <div class="icon">💳</div>
+
+                    <div class="metal_assit ">
+                        <p class="name">Debts & Loans You Owe</p>
+                        <p class="detail"> Money you currently owe to others</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <input type="number"class="input1 input debt" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="gold reveal">
+                    <div class="icon">📋</div>
+
+                    <div class="metal_assit ">
+                        <p class="name">Bills Due Right Now</p>
+                        <p class="detail"> Rent, utility bills due this month</p>
+                    </div>
+
+                    <div class="in_assit">
+                       <input type="number"class="input1 input bills" placeholder="0">
+                    </div>
+                </div> 
+           </div>
+
+           <div class="zakat-summary">
+    <div class="start">Enter your assets above to check</div>
+    <div class="summary-header">
+        <span class="title">YOUR ZAKAT DUE</span>
+        <div class="line">0</div>
+        <p class="fill">Fill in your assets to see the result</p>
+    </div>
+
+    <div class="summary-list">
+
+        <div class="summary-item">
+            <span>🏅 Gold</span>
+            <span class="goldy">--</span>
+        </div>
+
+        <div class="summary-item">
+            <span>🥈 Silver</span>
+            <span class="silvers">--</span>
+        </div>
+
+        <div class="summary-item">
+            <span>💵 Cash & Savings</span>
+            <span class="saving">--</span>
+        </div>
+
+        <div class="summary-item">
+            <span>📈 Investments</span>
+            <span class="invest">--</span>
+        </div>
+
+        <div class="summary-item">
+            <span>🤝 Owed to you</span>
+            <span class="back">--</span>
+        </div>
+
+        <div class="summary-item debt">
+            <span>💳 Debts & Bills</span>
+            <span class="dbetbill" >--</span>
+        </div>
+
+        <div class="summary-item total">
+            <span>Net Zakatable Wealth</span>
+            <span class="netwealth">- </span>
+        </div>
+
+    </div>
+
+    <button class="save-btn">
+        💾 Save Summary
+    </button>
+
+    <button class="reset-btn">
+        ↺ Reset all fields
+    </button>
+
+</div>
+        </section>
+
+
+    </main>
+</section>        
+
+    </main>
+        <footer>
+
+            <div class="foot">
+                <p class="ic_translate">© 2026 DeenConnect Pakistan</p>
+                <p class="closing">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                <p class="ic_translate">Made by Saeed❤️in Lahore</p>
+            </div>
+        </footer>
+
+    
+<script src="{% static 'js/zukat.js' %}"></script>
+
+</body>
+</html>

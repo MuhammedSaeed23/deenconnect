@@ -161,16 +161,38 @@ body{
 
 .search{
     height:3rem ;
+    width: 90%;
+    /* background: rgba(255, 255, 255, 0.07); */
+    font-size: large;
+    /* border: 1px solid rgba(255, 255, 255, 0.55) ; */
+    /* color: #ffffff; */
+    /* padding-left: 1rem; */
+    outline: none;
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background: rgba(255, 255, 255, 0.07);
+}
+ .search_container{
+    height:3rem ;
     width: 40%;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.07);
     font-size: large;
     border: 1px solid rgba(255, 255, 255, 0.55) ;
     color: #ffffff;
-    padding-left: 1rem;
+    display: flex;
 
+ }
+ .searchbtn{
+    width: 10%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+    height: 3rem;
+    font-size: larger;
 
-}
+ }
 .city{
     height:3rem ;
     background: rgba(255, 255, 255, 0.07);
@@ -231,7 +253,7 @@ body{
 }
 
 .masjid-name{
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
     color: #ffffff;
@@ -240,6 +262,7 @@ body{
 .location{
     margin-bottom: 2rem;
     line-height: 1.6;
+    margin-left: 1rem;
     color: rgba(255, 255, 255, 0.55);
 
 }
@@ -268,7 +291,6 @@ body{
     font-size: small;
     color: rgba(255, 255, 255, 0.55);
 
-
 }
 
 .timing span{
@@ -285,7 +307,9 @@ body{
 .mosquebody{
     min-height: 34rem;
     background-color: #faf8f3;
-    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .about{
     background: 
@@ -302,7 +326,7 @@ body{
     .sub-mosque{
         width: 30%;
         border: 1px solid #0a2318;
-        height: 20rem;
+        height: 27rem;
         border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.377);
     transition: all 0.2s ease;
@@ -321,20 +345,36 @@ body{
 
     }
   .icon{
-        background-color: #e2f2e9;
+        background: rgba(212, 175, 55, 0.10);
         font-size: xx-large;
-        height: 3rem;
-        width: 3rem;
-        border-radius: 4px;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
   }
   .dist{
-    color: #d4af37;
     margin-top: 1rem;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    background: rgba(212, 175, 55, 0.10);
+    font-weight: 700;
+    border-radius: 10px;
+    width: 5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: ce;
+    align-items: center;
+
+
+
   }
     .timing-sub{
     display: flex;
-    gap: 1rem;
+    gap: 4px;
     flex-wrap: wrap;
     margin-top: 2rem;
 }
@@ -345,8 +385,6 @@ body{
 }
 .mosquecity{
     color: #0a2318;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     font-weight: bold;
     
 
@@ -360,6 +398,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    margin-left: 1rem;
 }
 
 .timing-sub p{
@@ -386,7 +425,10 @@ body{
 }
 .mosquebox{
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
+    position: relative;
 
 }
 .prayer{
@@ -398,7 +440,6 @@ body{
     background: #0a2318;
     display: flex;
     height: 8rem;
-    margin-top: 3rem;
     align-items: center;
     justify-content: space-around;
 }
@@ -406,6 +447,11 @@ body{
     color: rgba(201, 168, 76, 0.55);
     font-size: x-large;
 }
+.ic_translate{
+    color: gray;
+
+}
+
 .reveal{
     opacity: 0;
     transform: translateY(40px);
@@ -430,7 +476,185 @@ body{
         transform: translateY(0);
     }
 }
+.find{
+    font-size: 16px;
+    width: 20%;
+    height: 3rem;
+    border-radius: 15px;
+    background-color: #d4af37;
+    color:#ffffff;
+    cursor: pointer;
 
+}
+.static{
+    color:gray;
+    font-size: larger;
+    margin-top: 11rem;
+    opacity: 0.6;
+}
+.direction{
+    width: 70%;
+    background-color: #0d2a1a;
+    border-radius: 10px;
+    color: #ffffff;
+    height: 2.5rem;
+    font-size: large;
+    font-weight: 700;
+}
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
+.headers{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 95%;
+}
+#map{
+    width: 90%;
+    height: 400px;
+     position:relative;
+     z-index: 999;
+     margin-top: 3rem;
+     margin-bottom: 1rem;
+}
+.close-btn,
+.fullscreen-btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
 
+.close-btn{
+    top: 10px;
+    right: 10px;
+}
 
+.fullscreen-btn{
+    top: 60px;
+    right: 10px;
+}
+
+.close-btn:hover,
+.fullscreen-btn:hover{
+    background: #f1f1f1;
+}
+.purpose2{
+    text-transform: uppercase;
+    color: #2d7a55 ;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 6rem;
+}
+.purpose2::before{
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #d4af37;
+    display: inline-block;
+   
+}
+.pur{
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+
+}
+.direction-btn{
+    position:absolute;
+    top:20px;
+    right:4rem;
+    z-index:9999;
+}
+.google-btn{
+
+    position:absolute;
+
+    bottom:15px;
+
+    right:10px;
+
+    padding:10px 14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#4285F4;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    z-index:1000;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+
+    transition:.2s;
+
+}
+
+.google-btn:hover{
+
+    background:#3367D6;
+
+}
+.shake-error{
+    border:2px solid #e53935 !important;
+    animation:shake .35s ease;
+    box-shadow:0 0 8px rgba(229,57,53,.35);
+}
+
+@keyframes shake{
+
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-8px);}
+    40%{transform:translateX(8px);}
+    60%{transform:translateX(-6px);}
+    80%{transform:translateX(6px);}
+    100%{transform:translateX(0);}
+
+}
+.loading{
+    margin-top: 10rem;
+    display: none;
+}
+.spinner{
+    animation: spin 1s linear infinite;
+    color:#2b7fff;
+    font-size:2.5rem;
+}
+.loadtext{
+color: gray;   
+}
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}

@@ -19,6 +19,7 @@ from django.urls import path
 from core.views import *
 from learning.views import *
 from django.urls import path,include
+from zukat.views import*
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('learning/',include('learning.urls')),
     path('Dua/',include('Dua.urls')),
     path('masjid/',include('mosque.urls')),
+    path('zakat/',zakat,name="zakat"),
 ]
