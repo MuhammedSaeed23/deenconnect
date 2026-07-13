@@ -6,7 +6,7 @@ def duafun(request):
     return render(request,'dua.html')
 
 def get_dua(request,category):
-    duas=Dua.objects.filter(category=category)
+    duas=Dua.objects.filter(category=category) 
     data=[]
     
     for dua in duas:
@@ -23,4 +23,21 @@ def get_dua(request,category):
         
     return JsonResponse( data,safe=False )
      
+
+def search_dua(request,title):
+    duas=Dua.objects.filter(title__icontains=title) 
+    data=[]
     
+    for dua in duas:
+
+        data.append({
+
+            "title": dua.title,
+            "arabic": dua.arabic,
+            "translation": dua.translation,
+            "reference": dua.reference,
+            "category": dua.category,
+
+        })
+        
+    return JsonResponse( data,safe=False )

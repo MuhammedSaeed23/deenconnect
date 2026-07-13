@@ -21,7 +21,7 @@ card.forEach((card)=>{
     card.addEventListener("click",()=>{
 
         const category=card.dataset.category;
-        fetch(`/Dua/${category}/`)
+        fetch(`/Dua/category/${category}/`)
         .then(response=>response.json())
         .then(data=>{
        const container= document.querySelector(".duashell");
@@ -68,10 +68,10 @@ footer.scrollIntoView({
     });
 });
 const search=document.querySelector(".search")
-search.addEventListener("change",()=>{
-
-    const category=search.value;
-    fetch(`/Dua/${category}`)
+search.addEventListener("keydown",(e)=>{
+    if (e.key==="Enter"){
+    const title=search.value.trim();
+    fetch(`/Dua/search/${title}/`)
      .then(response=>response.json())
      .then(data=>{
         console.log(data)
@@ -115,8 +115,20 @@ footer.scrollIntoView({
             console.log(data);
         })
         .catch(error => console.error(error));
+}
     });
 
-
+const suggestion=document.querySelectorAll(".suggestion")
+const inputfield= document.querySelector(".search")
+suggestion.forEach((item)=>{
+    item.addEventListener("click",()=>{
+        suggestion.forEach((i)=>{ i.classList.remove("triger")})
+        item.classList.add("triger")
+        let datas=item.innerText
+        console.log(datas)
+       inputfield.value=item.innerText
+       inputfield.focus();
+    })
+})
 
 
