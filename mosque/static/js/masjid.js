@@ -21,19 +21,20 @@ const find    = document.querySelector(".find");
 const staticEl = document.querySelector(".static"); // BUG FIX: 'static' reserved word hai JS mein
  
 find.addEventListener("click", () => {
- const foot=document.querySelector(".foot")
-    console.log(foot)
-    foot.scrollIntoView({
-     behavior:"smooth"
-     })
-    staticEl.style.display = "none";
-    loading.style.display  = "flex";
- 
     navigator.geolocation.getCurrentPosition(
         (position) => {
             const latitude  = position.coords.latitude;
             const longitude = position.coords.longitude;
             doFetch(latitude, longitude); // location milne ke BAAD fetch karo
+             const foot=document.querySelector(".foot")
+             console.log(foot)
+              foot.scrollIntoView({
+               behavior:"smooth"
+                })
+             staticEl.style.display = "none";
+             loading.style.display  = "flex";
+ 
+
         },
         (error) => {
             loading.style.display = "none";
@@ -294,20 +295,12 @@ let userLng = null;
 search.addEventListener("click", () => {
 
 
-     staticEl.style.display = "none";
-     loading.style.display = "flex";
 
     if (input.value.trim() === "") {
         container.classList.add("shake-error");
         setTimeout(() => container.classList.remove("shake-error"), 350);
         return;
     }
-      const foot=document.querySelector(".foot")
-       console.log(foot)
-       foot.scrollIntoView({
-       behavior:"smooth"
-     })
-
     // BUG FIX 1 (continued): geolocation aur fetch ko sahi order mein rakho
     // pehle location lo, phir fetch karo — warna lat/lng undefined rehta hai
     navigator.geolocation.getCurrentPosition(
@@ -315,6 +308,14 @@ search.addEventListener("click", () => {
             userLat = position.coords.latitude;
             userLng = position.coords.longitude;
             doSearch(); // location milne ke baad hi search karo
+            staticEl.style.display = "none";
+            loading.style.display = "flex";
+            const foot=document.querySelector(".foot")
+            console.log(foot)
+            foot.scrollIntoView({
+            behavior:"smooth"
+             })
+
         },
         function (error) {
             // Agar user location deny kare toh bhi search chalao
